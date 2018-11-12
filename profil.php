@@ -1,10 +1,11 @@
-<?php
-include_once "session.php";
+<!DOCTYPE html>
+<?php 
+    include_once "session.php";
 ?>
 <html>
-  <head>
-  <title>Home</title>
-  <meta charset="utf-8" />
+<head>
+    <title>Profil</title>
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -13,9 +14,8 @@ include_once "session.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="public/style/style.css">
     <script type="text/javascript" src="public/js/main.js"></script>
-  </head>
-  <body class="home">
-  <?php include_once "nav.php"; ?>
-
-  </body>
+</head>
+<body class="home">
+    <?php include_once "nav.php"; ?>    
+</body>
 </html>
