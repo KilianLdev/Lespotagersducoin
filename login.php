@@ -59,7 +59,7 @@ function login($mail, $psw, $fromCookie = false) {
     <link rel="stylesheet" type="text/css" href="public/style/style.css">
     <script type="text/javascript" src="public/js/main.js"></script>
   </head>
-  <body>
+  <body class="loger">
     <div class="container">
 			<div class="row">
           <div class="col-md-4 offset-md-8">
