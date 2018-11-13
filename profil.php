@@ -3,7 +3,7 @@
     include_once "session.php";
     include_once "db.php";
 
-    $user = 1;
+    $user = 2;
 
     $sql = $db->query("SELECT * FROM profil");
 
@@ -15,6 +15,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/jpg" href="public/img/logo.jpg" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,7 +26,6 @@
 
     <body class="home">
         <?php include_once "nav.php"; ?>
-
         <div class="container">    
             <?php if($user == $donnees['ID']){ ?>
             <div class="jumbotron">
