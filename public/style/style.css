@@ -1,12 +1,15 @@
-body{
+.login{
     padding-top: 90px;
     background-image: url("../img/photo_de_fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .home{
+	background-color: #004d00;
 	padding-top: 30px;
 	padding-left:30px;
+	padding-right:30px;
+	overflow-x: hidden;
 }
 .nav-link{
 	color: #000000;
@@ -99,4 +102,24 @@ body{
 	color: #fff;
 	background-color: #32CD32;
 	border-color: #32CD32;
+}
+
+.card-img {
+	width: 100%;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.card {
+	margin-bottom: 30px;
+}
+
+.btn-primary{
+	border-color: #32CD32;
+	background-color: #32CD32;
+
+
+
 }
