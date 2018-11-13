@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "db.php";
     if(isset($_GET['logout'])) {
        setcookie("mail", "", time() - 3600, "/");
@@ -20,7 +21,9 @@ include_once "nav.php";
     <script type="text/javascript" src="public/js/main.js"></script>
   </head>
   <body class="home">
-  <?php include_once "nav.php"; ?>
+
+    <?php include_once "nav.php"; 
+          include_once "listadvert.php";   ?>
 
   </body>
 </html>
