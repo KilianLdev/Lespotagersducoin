@@ -47,6 +47,8 @@
             </div>
             <?php } ?>
         </div>
+        <?php } ?>
+        <?php include_once "listadvert.php"; ?>
     </body>
+    <?php include_once "footer.php"; ?>
 </html>
-<?php } ?>

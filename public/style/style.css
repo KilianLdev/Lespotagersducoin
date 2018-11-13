@@ -119,7 +119,11 @@
 .btn-primary{
 	border-color: #32CD32;
 	background-color: #32CD32;
-
-
-
 }
+.details li {
+    list-style: none;
+  }
+  li {
+      margin-bottom:10px;
+      
+  }
