@@ -8,5 +8,4 @@ include_once "db.php";
 
        header("Location: login.php");
      }
-include_once "nav.php";
 ?>

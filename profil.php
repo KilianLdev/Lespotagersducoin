@@ -3,10 +3,11 @@
     include_once "session.php";
     include_once "db.php";
 
+    $user = 1;
+
     $sql = $db->query("SELECT * FROM profil");
 
     while ($donnees = $sql->fetch()){
-
 ?>
 <html>
     <head>
@@ -26,7 +27,8 @@
         <?php include_once "nav.php"; ?>
 
         <div class="container">    
-            <div class="jumbotron" style="opacity:0,5;">
+            <?php if($user == $donnees['ID']){ ?>
+            <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                         <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
@@ -37,11 +39,13 @@
                         </div>
                         <hr>
                         <ul class="container details">
-                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span><?php echo $donnees['mail']?></p></li>
-                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a>
+                            <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>Tel : <?php if($donnees['telephone'] != null){ echo $donnees['telephone']; } else{ echo 'Non Renseigné'; } ?></p></li>
+                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>Mail : <?php echo $donnees['mail']?></p></li>
+                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span>Site : <a href="#">www.example.com</p></a>
                         </ul>
                 </div>
             </div>
+            <?php } ?>
         </div>
     </body>
 </html>
