@@ -3,7 +3,7 @@
     include_once "session.php";
     include_once "db.php";
 
-    $user = 2;
+    $user = 3;
 
     $sql = $db->query("SELECT * FROM profil");
 
@@ -41,7 +41,7 @@
                         <ul class="container details">
                             <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>Tel : <?php if($donnees['telephone'] != null){ echo $donnees['telephone']; } else{ echo 'Non Renseigné'; } ?></p></li>
                             <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>Mail : <?php echo $donnees['mail']?></p></li>
-                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span>Site : <a href="#">www.example.com</p></a>
+                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span>Nombre d'annonces: </p>
                         </ul>
                 </div>
             </div>

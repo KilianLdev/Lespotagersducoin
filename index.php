@@ -18,7 +18,8 @@ include_once "session.php";
   </head>
   <body class="home">
 
-    <?php include_once "nav.php"; 
+    <?php include_once "nav.php";
+          include_once "search.php"; 
           include_once "listadvert.php";   ?>
 
   </body>
