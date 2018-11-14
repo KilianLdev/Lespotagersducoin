@@ -1,7 +1,7 @@
 <?php
 include_once "db.php";
 
-$user = 1;
+$user = 3;
 $_SESSION = $user;
 
     if(isset($_GET['logout'])) {
