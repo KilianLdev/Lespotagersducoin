@@ -25,7 +25,7 @@
     </head>
 
     <body class="home">
-        <?php include_once "nav.php"; ?>
+        <?php include_once "header.php"; ?>
         <div class="container">    
             <?php if($user == $donnees['ID']){ ?>
             <div class="jumbotron">

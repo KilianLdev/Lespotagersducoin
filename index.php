@@ -17,10 +17,11 @@ include_once "session.php";
     <script type="text/javascript" src="public/js/main.js"></script>
   </head>
   <body class="home">
-
-    <?php include_once "nav.php";
-          include_once "search.php"; 
+    <?php include_once "header.php";?>
+    <div class="container">
+    <?php      include_once "search.php"; 
           include_once "listadvert.php";   ?>
+</div>
 
   </body>
 </html>
