@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  lun. 12 nov. 2018 à 10:56
+-- Hôte : localhost:8889
+-- Généré le :  mer. 14 nov. 2018 à 15:30
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -30,20 +30,13 @@ CREATE TABLE `advert` (
   `autor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
--- Structure de la table `profil`
+-- Déchargement des données de la table `advert`
 --
 
-CREATE TABLE `profil` (
-  `ID` int(11) NOT NULL,
-  `firstname` text NOT NULL,
-  `lastname` text NOT NULL,
-  `mail` varchar(30) NOT NULL,
-  `psw` varchar(150) NOT NULL,
-  `img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `advert` (`ID`, `img_advert`, `title`, `date`, `number`, `weight`, `autor`) VALUES
+(1, './AdImages/pomme.jpg', 'pomme', '2018-11-13', 34, 0, 1),
+(2, './AdImages/tomate.jpg', 'tomates', '2018-11-15', 21, 0, 2);
 
 --
 -- Index pour les tables déchargées
@@ -53,13 +46,8 @@ CREATE TABLE `profil` (
 -- Index pour la table `advert`
 --
 ALTER TABLE `advert`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Index pour la table `profil`
---
-ALTER TABLE `profil`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `autor` (`autor`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -69,10 +57,14 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT pour la table `advert`
 --
 ALTER TABLE `advert`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `profil`
+-- Contraintes pour les tables déchargées
 --
-ALTER TABLE `profil`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Contraintes pour la table `advert`
+--
+ALTER TABLE `advert`
+  ADD CONSTRAINT `advert_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `profil` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
