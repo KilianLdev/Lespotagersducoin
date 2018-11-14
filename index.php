@@ -19,8 +19,7 @@ include_once "session.php";
   <body class="home">
     <?php include_once "header.php";?>
     <div class="container">
-    <?php include_once "listadvert.php";?>
-</div>
-
+      <?php include_once "listadvert.php";?>
+    </div>
   </body>
 </html>
