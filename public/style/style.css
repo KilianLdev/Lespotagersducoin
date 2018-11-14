@@ -1,7 +1,6 @@
 header{
 	background-color: #5D4037;
 }
-
 .login{
     padding-top: 90px;
     background-image: url("../img/photo_de_fond.jpg");
@@ -14,6 +13,11 @@ header{
 	padding-left:30px;
 	padding-right:30px; */
 	overflow-x: hidden;
+}
+h3{
+	font-family: Apple Chancery, cursive;
+	color: #28a745;
+	padding-right: 15px;
 }
 .navbar-light .navbar-nav .nav-link {
     color: white;
