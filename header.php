@@ -1,10 +1,3 @@
-<?php
-  if(isset($_GET['search']) AND !empty($_GET['search'])){
-    $q= htmlspecialchars($_GET['search']);
-  }
-?>
-
-
 <header>
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +9,7 @@
       <li class="nav-item active">
         <h3> Les potagers du coin </h3>
       </li>    
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.php"><i class="fas fa-home"></i></a>
         </li>
         <li class="nav-item">
@@ -27,7 +20,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method = "get">
-        <input class="form-control mr-sm-2" name="search" type="search" placeholder="Recherche..." aria-label="Search">
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Recherche..." aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
       </form>
     </div>
