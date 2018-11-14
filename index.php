@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once "session.php";
+var_dump($_SESSION);
 ?>
 <html>
   <head>
