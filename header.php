@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+      <li class="nav-item">
         <h3> Les potagers du coin </h3>
       </li>    
         <li class="nav-item">
@@ -14,6 +14,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="profil.php"><i class="fas fa-user-circle"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php"><i class="fas fa-plus-square"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?logout=true"><i class="fas fa-sign-out-alt"></i></a>
