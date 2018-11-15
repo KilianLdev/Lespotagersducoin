@@ -9,7 +9,7 @@ if(isset($_GET['q']) AND !empty($_GET['q'])){
 }
 //récupération des cartes perso pour le profil
 if (explode('/', $_SERVER['REQUEST_URI'])[2] == 'profil.php') {
-    $sql .= ' AND a.autor = ' . $_SESSION;
+    $sql .= ' AND a.autor = ' . $_SESSION['ID'];
 }
     $req = $db->prepare($sql);
     $req->execute();

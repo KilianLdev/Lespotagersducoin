@@ -43,7 +43,7 @@ function login($mail, $psw, $fromCookie = false) {
     setcookie("mail", $mail, time() + (86400 * 30), "/"); // 86400 = 1 jour
     setcookie("psw", $hash, time() + (86400 * 30), "/"); // 86400 = 1 jour
 
-    $_SESSION['idUser'] = $dataUser['id'];
+    $_SESSION['ID'] = intval($dataUser['ID']);
     header("Location: index.php"); // Lorsque log envoie vers la page Index
   }else {
     echo "Identifiant ou mot de passe incorrect.";

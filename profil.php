@@ -1,12 +1,10 @@
 <?php 
-    session_start();
     include_once "session.php";
     include_once "db.php";
     
     $sql = $db->query("SELECT * FROM profil");
-    
-    $nbadvert = $db->query("SELECT COUNT(autor) FROM advert WHERE autor = $_SESSION");
-    $nbadvert = (int) $nbadvert->fetch()[0];
+    $nbadvert = $db->query("SELECT COUNT(autor)FROM advert WHERE autor = " . intval($_SESSION['ID']));
+    $nbadvert = intval($nbadvert->fetch()[0]);
     
     while ($donnees = $sql->fetch()){
         ?>
@@ -29,7 +27,7 @@
     <body class="home">
         <?php include_once "header.php"; ?>
         <div class="container" style="padding:5px">    
-            <?php if($_SESSION == $donnees['ID']){ ?>
+            <?php if($_SESSION['ID'] == $donnees['ID']){ ?>
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
