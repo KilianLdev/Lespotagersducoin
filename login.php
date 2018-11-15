@@ -8,15 +8,20 @@ if(isset($_POST['createAccount'])) {
   
   $password = $_POST['psw'];
   $hash = hash("sha256", $password . $_POST['mail']);//Mot de passe crypter
-
-  $req = $db->prepare("INSERT INTO profil (lastname, firstname, psw, mail) VALUES(:lastname, :firstname, :psw, :mail)");
-  $req->execute(array(
-        "lastname"  => $_POST['lastname'],
-        "firstname" => $_POST['firstname'],
-        "mail"      => $_POST['mail'],
-        "psw"       => $hash));
-
-$req->rowCount(); //verifie la creation du compte en retournant 1
+  if(
+    strlen($_POST['mail']) > 0
+    && filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)
+    && strlen($_POST['firstname']) > 0 
+    && strlen($_POST['lastname']) > 0
+    ){
+        $req = $db->prepare("INSERT INTO profil (lastname, firstname, psw, mail) VALUES(:lastname, :firstname, :psw, :mail)");
+        $req->execute(array(
+          "lastname"  => $_POST['lastname'],
+          "firstname" => $_POST['firstname'],
+          "mail"      => $_POST['mail'],
+          "psw"       => $hash));
+          $req->rowCount(); //verifie la creation du compte en retournant 1
+      }
 }
 
 /****** COOKIE *******/
