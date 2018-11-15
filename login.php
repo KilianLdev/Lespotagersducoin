@@ -21,6 +21,8 @@ if(isset($_POST['createAccount'])) {
           "mail"      => $_POST['mail'],
           "psw"       => $hash));
           $req->rowCount(); //verifie la creation du compte en retournant 1
+      }else{
+        echo "Veuillez remplir vos champs correctement s'il vous plaît !";
       }
 }
 
