@@ -43,7 +43,7 @@
             <p class="card-text"> Date de publication : <?php echo $results[$i]["date"] ?></p>
             <p class="card-text"> Nombre de <?php echo $results[$i]["title"] . ": " . $results[$i]["number"]; ?></p>
             <p class="card-text"> Auteur : <?php echo $results[$i]["autor"]; ?></p>
-            <a href="#" class="btn btn-primary">Contacter</a>
+            <a href="profil.php?autor" class="btn btn-primary">Contacter</a>
           </div> 
         </div>
     </div>
