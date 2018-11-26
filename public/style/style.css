@@ -2,11 +2,11 @@ header{
 	background-color: #5D4037;
 	margin-bottom: 30px;
 }
-.login{
-    padding-top: 90px;
+.section-login{
     background-image: url("../img/photo_de_fond.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+	background-size: cover;
+	min-height: 100vh;
 }
 .home{
 	background-color: #43A047;
@@ -32,9 +32,10 @@ h3{
 	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 }
 .panel-login>.panel-heading {
-    color: #00415d;
+    color: #fff;
     border-color: #fff;
 	text-align:center;
+	padding: 1rem 0;
 }
 .panel-login>.panel-heading a{
 	text-decoration: none;
@@ -46,7 +47,7 @@ h3{
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a.active{
-	color: #32CD32;
+	color: #32CD32!important;
   	font-size: 16px!important;
 }
 .panel-login>.panel-heading hr{
@@ -138,3 +139,57 @@ h3{
       margin-bottom:10px;
       
   }
+/* 
+.filter{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	background-color: rgba(154, 149, 138, 0.466);
+	z-index: 2;
+} */
+.container-login{
+	padding-top: 90px;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+	left: 0;
+}
+.block-left-login h1{
+	font-size: 60px;
+	font-family: Apple Chancery, cursive;
+
+}
+.block-left-login h2{
+	font-size: 30px;
+	font-weight: 400i;
+}
+.block-left-login p{
+	margin-top: 2rem;
+}
+
+
+
+
+.block-left-login{
+	padding-right: 10rem!important;
+}
+.panel-login{
+	background-color: rgba(65, 64, 63, 0.8);
+}
+.form-control{
+	height: inherit!important;
+	border-radius: 30px;
+}
+.btn-login, .btn-register{
+	padding: 8px 0;
+	width: 100%;
+	display: block;
+}
+.border-nav-form{
+	border-right: 1px solid #fff;
+}
+.panel-heading a{
+	color: #fff!important;
+}

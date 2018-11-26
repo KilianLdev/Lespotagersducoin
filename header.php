@@ -16,7 +16,7 @@
           <a class="nav-link" href="profil.php"><i class="fas fa-user-circle"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php"><i class="fas fa-plus-square"></i></a>
+          <a class="nav-link" href="creadvert.php"><i class="fas fa-plus-square"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?logout=true"><i class="fas fa-sign-out-alt"></i></a>
