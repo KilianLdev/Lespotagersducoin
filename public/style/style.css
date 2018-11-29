@@ -1,5 +1,5 @@
 header{
-	background-color: #5D4037;
+	background-color: #28a745;
 	margin-bottom: 30px;
 }
 .section-login{
@@ -9,12 +9,12 @@ header{
 	min-height: 100vh;
 }
 .home{
-	background-color: #43A047;
+	background-color: #ecedec;
 	overflow-x: hidden;
 }
 h3{
 	font-family: Apple Chancery, cursive;
-	color: #28a745;
+	color: #ffff;
 	padding-right: 15px;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -168,10 +168,6 @@ h3{
 .block-left-login p{
 	margin-top: 2rem;
 }
-
-
-
-
 .block-left-login{
 	padding-right: 10rem!important;
 }
@@ -192,4 +188,19 @@ h3{
 }
 .panel-heading a{
 	color: #fff!important;
+}
+button.btn {
+	border-radius: 50px!important;
+	color: #fff;
+	border-color: #fff;
+	padding: 6px 35px;
+}
+button.btn:hover {
+	color: #32CD32;
+	background-color: #fff;
+}
+@media (min-width: 576px){
+.form-inline .form-control {
+	width: 300px;
+}
 }
