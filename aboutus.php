@@ -7,6 +7,7 @@
     <link rel="icon" type="image/jpg" href="public/img/logo.jpg" />
     <link rel="stylesheet" type="text/css" href="public/style/style.css" />
     <script type="text/javascript" src="public/js/main.js"></script>
+    <title>About us</title>
 </head>
 <body class="aboutus">
     <section class="section-about">
