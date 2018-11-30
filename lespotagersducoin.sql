@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 26 nov. 2018 à 15:27
+-- Généré le :  ven. 30 nov. 2018 à 10:57
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -35,13 +35,13 @@ CREATE TABLE `advert` (
 --
 
 INSERT INTO `advert` (`ID`, `img_advert`, `title`, `date`, `number`, `weight`, `autor`) VALUES
-(1, './AdImages/tomate.jpg', 'tomates', '2018-11-13', 22, 0, 3),
-(3, './AdImages/aubergine.jpg', 'aubergines', '2018-11-13', 3, 0, 2),
-(5, './AdImages/pomme.jpg', 'pommes', '2018-11-01', 16, 0, 3),
-(7, './AdImages/concombre.jpg', 'concombres', '2018-11-14', 5, 0, 3),
-(9, './AdImages/orange.jpg', 'oranges', '2018-11-13', 8, 0, 4),
-(11, './AdImages/poire.jpg', 'poires', '2018-11-16', 3, 0, 4),
-(12, './AdImages/amande.jpg', 'amandes', '2018-11-14', 127, 0, 2);
+(1, './AdImages/tomate.jpg', 'tomates', '2018-11-13', 22, 2, 3),
+(3, './AdImages/aubergine.jpg', 'aubergines', '2018-11-13', 3, 4, 2),
+(5, './AdImages/pomme.jpg', 'pommes', '2018-11-01', 16, 7, 3),
+(7, './AdImages/concombre.jpg', 'concombres', '2018-11-14', 5, 3, 3),
+(9, './AdImages/orange.jpg', 'oranges', '2018-11-13', 8, 3, 4),
+(11, './AdImages/poire.jpg', 'poires', '2018-11-16', 3, 2, 4),
+(12, './AdImages/amande.jpg', 'amandes', '2018-11-14', 127, 5, 2);
 
 -- --------------------------------------------------------
 

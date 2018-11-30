@@ -7,7 +7,7 @@
     }
 
     //lancement de la requete
-    $sql = 'SELECT title, date, number, img_advert, CONCAT(profil.firstname, " ",profil.lastname) autor FROM advert a INNER JOIN profil ON profil.ID = a.autor WHERE 1';
+    $sql = 'SELECT title, date, number, weight, img_advert, CONCAT(profil.firstname, " ",profil.lastname) autor FROM advert a INNER JOIN profil ON profil.ID = a.autor WHERE 1';
 
     //request search
     if(isset($_GET['q']) AND !empty($_GET['q'])){
@@ -41,9 +41,10 @@
           <div class="card-body">
             <h5 class="card-title"><?php echo $results[$i]["title"]; ?></h5>
             <div class="infoAdvert">
-                <p class="card-text"> Date de publication : <?php echo $results[$i]["date"] ?></p>
-                <p class="card-text"> Nombre de <?php echo $results[$i]["title"] . ": " . $results[$i]["number"]; ?></p>
-                <p class="card-text"> Auteur : <?php echo $results[$i]["autor"]; ?></p>
+                <p class="card-text"><?php echo $results[$i]["date"] ?></p>
+                <p class="card-text"><?php echo $results[$i]["autor"]; ?></p>
+                <p class="card-text"><?php echo $results[$i]["weight"]; ?> Kg</p>
+                <p class="card-text">x<?php echo $results[$i]["number"]; ?></p>
             </div>
             <a href="profil.php?autor" class="btn btn-primary">Contacter</a>
           </div> 
