@@ -219,3 +219,23 @@ p{
 .jumbotron{
 	background-color: #fff;
 }
+.section-about{
+	background-image: url("../img/photo_de_fond.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+.container-aboutus{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	position: absolute;
+	text-align: center;
+	top: 10%;
+	margin: 10%;
+	padding: 5%;
+	background-color: rgba(65, 64, 63, 0.5);
+}
+.text-about{
+	color: #000000;
+}
