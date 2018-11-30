@@ -204,3 +204,9 @@ button.btn:hover {
 	width: 300px;
 }
 }
+h5 {
+	text-transform: uppercase;
+	border-bottom: 1px solid;
+    text-align: center;
+    padding-bottom: 8px;
+}
