@@ -40,9 +40,11 @@
         </div>
           <div class="card-body">
             <h5 class="card-title"><?php echo $results[$i]["title"]; ?></h5>
-            <p class="card-text"> Date de publication : <?php echo $results[$i]["date"] ?></p>
-            <p class="card-text"> Nombre de <?php echo $results[$i]["title"] . ": " . $results[$i]["number"]; ?></p>
-            <p class="card-text"> Auteur : <?php echo $results[$i]["autor"]; ?></p>
+            <div class="infoAdvert">
+                <p class="card-text"> Date de publication : <?php echo $results[$i]["date"] ?></p>
+                <p class="card-text"> Nombre de <?php echo $results[$i]["title"] . ": " . $results[$i]["number"]; ?></p>
+                <p class="card-text"> Auteur : <?php echo $results[$i]["autor"]; ?></p>
+            </div>
             <a href="profil.php?autor" class="btn btn-primary">Contacter</a>
           </div> 
         </div>

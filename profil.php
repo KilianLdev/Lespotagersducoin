@@ -6,10 +6,9 @@
     $nbadvert = $db->query("SELECT COUNT(autor)FROM advert WHERE autor = " . intval($_SESSION['ID']));
     $nbadvert = intval($nbadvert->fetch()[0]);
     
-    while ($donnees = $sql->fetch()){
+    
         ?>
 <!DOCTYPE html>
-<html>
     <head>
         <title>Profil</title>
         <meta charset="utf-8" />
@@ -23,32 +22,34 @@
         <link rel="stylesheet" type="text/css" href="public/style/style.css">
         <script type="text/javascript" src="public/js/main.js"></script>
     </head>
-
     <body class="home">
         <?php include_once "header.php"; ?>
-        <div class="container" style="padding:5px">    
-            <?php if($_SESSION['ID'] == $donnees['ID']){ ?>
-            <div class="jumbotron">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                        <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
-                    </div>
-                    <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
-                        <div class="container" style="border-bottom:1px solid black">
-                            <h2><?php echo $donnees['firstname']," ", $donnees['lastname'] ?></h2>
+            <?php while ($donnees = $sql->fetch()){ ?>  
+                <?php if($_SESSION['ID'] == $donnees['ID']){ ?>
+                    <div class="container" style="padding:5px">
+                        <div class="jumbotron">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                                    <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
+                                </div>
+                                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                                    <div class="container  pb-2" style="border-bottom:1px solid black">
+                                        <h2><?php echo $donnees['firstname']," ", $donnees['lastname'] ?></h2>
+                                    </div>
+                                    <ul class="container details mt-4">
+                                        <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>Tel : <?php if($donnees['telephone'] != null){ echo $donnees['telephone']; } else{ echo 'Non Renseigné'; } ?></p></li>
+                                        <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>Mail : <?php echo $donnees['mail']?></p></li>
+                                        <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span>Nombre d'annonces: <?php echo $nbadvert ?></p>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <hr>
-                        <ul class="container details">
-                            <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>Tel : <?php if($donnees['telephone'] != null){ echo $donnees['telephone']; } else{ echo 'Non Renseigné'; } ?></p></li>
-                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>Mail : <?php echo $donnees['mail']?></p></li>
-                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span>Nombre d'annonces: <?php echo $nbadvert ?></p>
-                        </ul>
-                </div>
-            </div>
+                    </div>
+                <?php } ?>
             <?php } ?>
-        </div>
-        <?php } ?>
-        <?php include_once "listadvert.php"; ?>
+            <div class="container">
+                <?php include_once "listadvert.php"; ?>
+            </div>
     </body>
     <?php include_once "footer.php"; ?>
 </html>
