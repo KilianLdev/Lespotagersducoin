@@ -20,5 +20,6 @@ include_once "session.php";
     <div class="container">
       <?php include_once "listadvert.php";?>
     </div>
+    <?php include_once "footer.php"?>
   </body>
 </html>
