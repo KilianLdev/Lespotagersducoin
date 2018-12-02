@@ -7,7 +7,7 @@
     }
 
     //lancement de la requete
-    $sql = 'SELECT title, date, number, weight, img_advert, CONCAT(profil.firstname, " ",profil.lastname) autor FROM advert a INNER JOIN profil ON profil.ID = a.autor WHERE 1';
+    $sql = 'SELECT title, `date`, `number`, weight, img_advert, CONCAT(profil.firstname, " ",profil.lastname) autor FROM advert a INNER JOIN profil ON profil.ID = a.autor WHERE 1';
 
     //request search
     if(isset($_GET['q']) AND !empty($_GET['q'])){
