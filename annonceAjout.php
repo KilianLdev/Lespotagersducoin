@@ -16,20 +16,31 @@ $message_erreur = ""
 </head>
 <body>
 	<?php include "header.php" ;?>
-	<h1>Veuillez compléter tout les champs</h1>
+	<div class="blocAjout">
+		<h3>Veuillez compléter tout les champs</h1>
+
 		<form class="form" action="ajout.php" role="form" method="post" enctype="multipart/form-data">
-			Nom<input type="number" name="nom" placeholder="nom">
-			<span class="help-inline"><?php echo $message_erreur;?></span>
-			<br />
-			Quantité<input type="number" name="number" placeholder="quantité ">
-			<span class="help-inline"><?php echo $message_erreur;?></span>
-			<br />
-			Poids au kilo<input type="number" name="weight" placeholder="poids/k">
-			<span class="help-inline"><?php echo $message_erreur;?></span>
-			<br />
-			<label for="image">Sélectionner une image:</label>
-            <input type="file" id="image" name="image"> <br />
-			<label for="produits">Choisir quel produit à échanger :</label>
+			<div class="nom">
+				<label >Nom<input type="number" name="nom" placeholder="nom"></label>
+				<span class="help-inline"><?php echo $message_erreur;?></span>
+				<br />
+			</div>
+			<div class="qtt">
+				<label >Quantité<input type="number" name="number" placeholder="quantité "></label>
+				<span class="help-inline"><?php echo $message_erreur;?></span>
+				<br />
+			</div>
+			<div class="poids">
+				<label >Poids au kilo<input type="number" name="weight" placeholder="poids/k"></label>
+				<span class="help-inline"><?php echo $message_erreur;?></span>
+				<br />
+			</div>
+			<div class="img">
+				<label for="image">Sélectionner une image:</label><br />
+	            <input type="file" id="image" name="image"> <br />
+	        </div>
+	        <div class="produit">
+			<label for="produits">Choisir quel produit à échanger :</label><br />
                 <select  name="produits">
 	                <?php        	
 	                    $reponse = $db->query('SELECT DISTINCT title FROM advert');
@@ -46,9 +57,13 @@ $message_erreur = ""
 
        		
                 <br />
+            </div>
+            <div class="btnReponse">
        		<button type="submit" class="bOui"> Ajouter</button>
             <a class="bNon" href="index.php">Retour</a>	
+        </div>
 		</form>
+		</div>
 		<?php include "footer.php" ; ?>
 </body>
 </html>
