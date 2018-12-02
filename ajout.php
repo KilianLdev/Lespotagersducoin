@@ -70,7 +70,7 @@ if(!empty($_POST))
 
         if($isSuccess == true && $uploadSuccess) 
         {
-            $statement = $db->prepare("INSERT INTO advert (img_advert,title, `number`, weight, autor) values( '".$imageChemin."','" . $produits . "', '".$qtt."','".$poids."','".$nom."')");
+            $statement = $db->prepare("INSERT INTO advert (img_advert,title, `number`, weight, autor, `date`) values( '".$imageChemin."','" . $produits . "', '".$qtt."','".$poids."','".$nom."', NOW())");
             $statement->execute(array($imageChemin,$produits,$qtt,$poids,$nom));
             header("Location: index.php");
         }
