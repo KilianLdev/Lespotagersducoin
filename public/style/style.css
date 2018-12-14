@@ -206,6 +206,7 @@ button.btn:hover {
 }
 .infoAdvert p{
 	padding-bottom:10px;
+	text-align: center;
 }
 h5 {
 	text-transform: uppercase;
