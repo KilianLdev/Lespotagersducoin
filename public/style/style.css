@@ -220,3 +220,70 @@ p{
 .jumbotron{
 	background-color: #fff;
 }
+.section-about{
+	background-image: url("../img/photo_de_fond.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+.container-aboutus{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	position: absolute;
+	text-align: center;
+	top: 10%;
+	margin: 10%;
+	padding: 5%;
+	background-color: rgba(65, 64, 63, 0.5);
+}
+.text-about{
+	color: #000000;
+}
+
+/* Create Advert */
+
+.blocAjout {
+	padding-top: 10px;
+	display: block;
+	
+	background-color: rgb(192,192,192);
+	border-radius: 5px;
+	width: 40%;
+	height: 600px;
+	margin-left: 30%;
+}
+
+.blocAjout form input{
+	margin-top: 15px;
+	margin-left: 10%;
+}
+
+
+
+.blocAjout form select{
+	margin-left: 5%;
+}
+
+.blocAjout h3{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.blocAjout .nom,
+.blocAjout .qtt,
+.blocAjout .poids,
+.blocAjout .img,
+.blocAjout .produit{
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+
+.blocAjout input#image{
+	margin-left: 5%;
+	margin-top: 0px;
+}
+
+.blocAjout .btnReponse{
+	text-align: center;
+}
