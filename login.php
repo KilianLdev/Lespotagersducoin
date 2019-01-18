@@ -9,8 +9,7 @@ if(isset($_POST['createAccount'])) {
   $password = $_POST['psw'];
   $hash = hash("sha256", $password . $_POST['mail']);//Mot de passe crypter
   if(
-    strlen($_POST['mail']) > 0
-    && filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)
+    filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)
     && strlen($_POST['firstname']) > 0 
     && strlen($_POST['lastname']) > 0
     ){
@@ -77,8 +76,7 @@ function login($mail, $psw, $fromCookie = false) {
              <h2>Partager et échanger facilement !</h2>
              <p>Les potagers du coin est un site qui vous permet d'échanger vos fruits et légumes facilement avec d'autres personnes qui ont du surplus, les agriculteurs sont présents sur le site aussi, vous pouvez ainsi soutenir les agriculteurs du côté de chez vous ! :D </p>
           </div>
-      
-      
+
          <div class="col-md-4 block-right-login">
             <div class="panel panel-login" style="padding: 15px;">
                 <div class="panel-heading">
