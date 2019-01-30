@@ -42,7 +42,7 @@
             <h5 class="card-title"><?php echo $results[$i]["title"]; ?></h5>
             <div class="infoAdvert">
                 <!-- <p class="card-text"><?php echo $results[$i]["date"] ?></p> -->
-                <!-- <p class="card-text"><?php echo $results[$i]["autor"]; ?></p> -->
+                 <p class="card-text"><?php echo $results[$i]["autor"]; ?></p> 
                 <p class="card-text" style="font-size: 35px"><?php echo $results[$i]["weight"]; ?> KG</p>
                 <p class="card-text" style="font-size: 20px">x<?php echo $results[$i]["number"]; ?></p>
             </div>
